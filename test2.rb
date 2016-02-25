@@ -18,6 +18,7 @@ class Customer
     end
 end
 
+
 # Create Objects
 cust1=Customer.new("1", "John", "Wisdom Apartments, Ludhiya")
 cust2=Customer.new("2", "Poul", "New Empire road, Khandala")
