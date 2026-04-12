@@ -1,0 +1,56 @@
+app:
+  id: ari:cloud:ecosystem::app/PLACEHOLDER
+  name: nexus-smart-actions
+
+modules:
+  jira:issuePanel:
+    - key: nexus-panel
+      title: NEXUS Actions
+      function: issue-panel-resolver
+
+  jira:issueGlance:
+    - key: nexus-glance
+      title: NEXUS
+      function: glance-resolver
+
+  jira:issueAction:
+    - key: nexus-action
+      title: NEXUS Actions
+      function: action-resolver
+
+  jira:projectPage:
+    - key: nexus-project-page
+      title: NEXUS
+      route: nexus-page
+      function: project-page-resolver
+
+  jira:globalSettings:
+    - key: nexus-global-settings
+      title: NEXUS — Smart Actions & Buttons
+      function: global-settings-resolver
+
+  jira:projectSettings:
+    - key: nexus-project-settings
+      title: NEXUS
+      function: project-settings-resolver
+
+  function:
+    - key: issue-panel-resolver
+      handler: src/render/issue-panel.handler
+    - key: glance-resolver
+      handler: src/render/issue-glance.handler
+    - key: action-resolver
+      handler: src/render/issue-action.handler
+    - key: project-page-resolver
+      handler: src/render/project-page.handler
+    - key: global-settings-resolver
+      handler: src/admin/global-settings.handler
+    - key: project-settings-resolver
+      handler: src/admin/project-settings.handler
+
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+    - manage:jira-project
+    - storage:app
