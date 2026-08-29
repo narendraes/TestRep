@@ -1,0 +1,7 @@
+node_modules/
+.forge/
+dist/
+*.log
+.env
+.env.*
+coverage/

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "atlassian": {
+      "type": "url",
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "note": "Jira + Confluence access — update DO issues, read requirements"
+    },
+    "github": {
+      "type": "url",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "note": "GitHub repo access — create PRs, read issues, push code"
+    }
+  }
+}
